@@ -4418,7 +4418,6 @@ var AmplitudeInitializer = function () {
    */
 			_config2.default.active_playlist = userConfig.starting_playlist;
 
-			console.log(userConfig);
 			/*
    	Check if the user defined a song to start with in the playlist.
    */
@@ -5760,6 +5759,34 @@ var Amplitude = function () {
   	Returns the percentage of the song played.
   */
 		return _config2.default.active_song.currentTime / _config2.default.active_song.duration * 100;
+	}
+
+	/**
+  * Allows the user to get the amount of seconds the song has played.
+  *
+  * Public Accessor: Amplitude.getSongPlayed();
+  *
+  * @access public
+  */
+	function getSongPlayed() {
+		/*
+  	Returns the amount of seconds the song has played.
+  */
+		return _config2.default.active_song.currentTime;
+	}
+
+	/**
+  * Allows the user to get the duration of the current song
+  *
+  * Public Accessor: Amplitude.getSongPlayed();
+  *
+  * @access public
+  */
+	function getSongDuration() {
+		/*
+  	Returns the duration of the current song
+  */
+		return _config2.default.active_song.duration;
 	}
 
 	/**
